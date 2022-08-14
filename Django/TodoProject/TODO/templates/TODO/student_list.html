@@ -1,0 +1,20 @@
+<h3> Student Details </h3>
+<p> Click on the Id for details of a particular Student</p>
+<hr/>
+<br>
+<br>
+<p>List of Ids</p>
+
+<ul>
+    {% for object in object_list %}
+
+    <li><a href="/details/{{object.id}}">{{object.id}}</a> | <a href="/update/{{object.id}}">Edit</a>| <a href="/delete/{{object.id}}">Delete</a> </li>
+        
+
+    <hr/>
+    {% empty %}
+    <li> No objects yet.</li>
+    {% endfor %}
+
+
+</ul>
